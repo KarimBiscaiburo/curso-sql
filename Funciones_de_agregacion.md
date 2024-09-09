@@ -29,3 +29,6 @@ SELECT avg(Price) FROM Products
 ```sql
 SELECT round(avg(Price)) AS promedio_redondeado FROM Products
 ```
+
+> [!IMPORTANT]
+> No se puede usar una función de agregación que utilice un valor que sea un resultado de otra función de agregación. En otras palabras, no se puede realizar una función de agregación que contenga una función de agregación. Hay una manera, que sería hacer subconsultas.
