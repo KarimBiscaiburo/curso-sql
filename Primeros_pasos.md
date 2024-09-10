@@ -42,9 +42,11 @@ Siguiendo todo lo aprendido anteriormente vamos a crear una tabla "usuarios", co
 
 ```sql
 CREATE TABLE usuarios (
+	"usuarioID" INTEGER,
 	"nombre"	TEXT,
 	"apellido"	TEXT,
-	"edad"	INTEGER
+	"edad"	INTEGER,
+	PRIMARY KEY("usuarioID" AUTOINCREMENT)
 );
 ```
 
