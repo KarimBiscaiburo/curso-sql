@@ -16,7 +16,7 @@ En este caso estamos haciendo una consulta para que nos devuelva una tabla con e
 
 ## HAVING
 
-Es una clausula que nos permite hacer filtrados de grupos, asi como el WHERE nos permite filtrar registros. A su vez, esta se utiliza siempre que exista la clausula de GROUP BY porque al ser una clausula que funciona con grupos, si nosotros no agrupamos previamente los resultados estariamos trabajando con filas, y HAVING no trabaja con filas
+Es una clausula que nos permite hacer filtrados de grupos, asi como el WHERE nos permite filtrar registros. A su vez, esta se utiliza siempre que exista la clausula de GROUP BY porque al ser una clausula que funciona con grupos, si nosotros no agrupamos previamente los resultados estariamos trabajando con filas, y HAVING no trabaja con filas.
 
 ```sql
 SELECT SupplierID, round(avg(Price)) AS promedio FROM Products
