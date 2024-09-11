@@ -62,12 +62,33 @@ RIGHT JOIN Rewards AS r ON e.EmployeesID = r.EmployeesID
 
 ```sql
 SELECT FirstName, Reward, Month FROM Rewards AS r
-RIGHT JOIN Employees AS e ON e.EmployeesID = r.EmployeesID
+LEFT JOIN Employees AS e ON e.EmployeesID = r.EmployeesID
 ```
 
 ## FULL JOIN
 
-Devuelve ambas tablas completas combinadas
+Devuelve ambas tablas completas combinadas, aunque tengan campos nullos.
+
+```sql
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+FULL OUTER JOIN Orders ON Customers.CustomerID=Orders.CustomerID
+ORDER BY Customers.CustomerName;
+```
+
+> [!IMPORTANT]
+> Este ejemplo es sacado de otra fuente, ya que en sqlite tampoco se puede hacer el FULL JOIN, pero si se puede simular de la siguiente manera:
+
+```sql
+SELECT FirstName, Reward, Month FROM Employees AS e
+LEFT JOIN Rewards AS r ON e.EmployeesID = r.EmployeesID
+
+UNION
+
+SELECT FirstName, Reward, Month FROM Rewards AS r
+LEFT JOIN Employees AS e ON e.EmployeesID = r.EmployeesID
+```
+
 
 
 ## CROSS JOIN
